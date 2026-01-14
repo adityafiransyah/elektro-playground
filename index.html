@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Elektro Playground - Aditya Firansyah</title>
+
+  <link rel="icon" type="image/png" href="assets/Faviconn.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/style.css" />
+</head>
+
+<body>
+  <nav class="navbar">
+    <div class="logo">Elektro Playground</div>
+    <button id="menuToggle">☰</button>
+    <ul class="nav-links">
+      <li><a href="#tentang">Tentang</a></li>
+      <li><a href="#proyek">Proyek</a></li>
+      <li><a href="#sertifikat-gabungan">Sertifikat</a></li>
+      <li><a href="#kontak">Kontak</a></li>
+    </ul>
+  </nav>
+
+  <header id="hero">
+    <div class="hero-content">
+      <h1>Hi, I’m Aditya Firansyah.</h1>
+      <p class="subtitle">Electrical Engineering Student & Tech Enthusiast.</p>
+      <a href="#proyek" class="btn-glow">Lihat Proyek Saya</a>
+      <a href="assets/HUB.pdf" download class="btn-glow">Unduh CV Saya</a>
+    </div>
+  </header>
+
+  <main>
+    <div id="content">
+      
+      <article id="tentang" class="card profile-card-highlight">
+        <div class="profile-flex">
+          <img src="assets/profile.png" alt="Foto Profil Aditya" class="profile-glow">
+          <div class="profile-text">
+            <h2>About Me</h2>
+            <p>Halo! Saya mahasiswa Teknik Elektro Universitas Sultan Ageng Tirtayasa angkatan 2024. Saat ini berada di semester 3 dengan ketertarikan pada perancangan rangkaian, pemrograman, dan eksplorasi sensor. Website ini menjadi ruang dokumentasi berbagai eksperimen dan proyek yang saya kerjakan, mulai dari yang bersifat akademis hingga eksplorasi mandiri.</p>
+          </div>
+        </div>
+      </article>
+
+      <section class="card">
+        <h3>Pendidikan</h3>
+        <p><strong>Universitas Sultan Ageng Tirtayasa</strong></p>
+        <p>Sarjana Teknik Elektro, 3.50/4.00</p>
+        <ul>
+          <li>Mengikuti Welcome To Himpunan Mahasiswa Elektro (WTHME) FT UNTIRTA 2024</li>
+          <li>Mengikuti Latihan Kepemimpinan Himpunan Mahasiswa Elektro (LKHME) FT UNTIRTA 2024.</li>
+          <li>Menerima penghargaan dari Universitas Sultan Ageng Tirtayasa atas pencapaian lolos Kewirausahaan Mahasiswa Indonesia (KMI EXPO XVI) 2025 Di Universitas Tidar, Magelang.</li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <h3>Pengalaman Organisasi</h3>
+        <ul>
+          <li>OSIS: Departemen Keagamaan (2023-2024)</li>
+          <li>Pramuka: Anggota Pramuka Kwartir Ranting (2023-2024)</li>
+          <li>SOBI Jilid 2: Divisi Logistik dalam tema indonesia pulih, indonesia lestari (2025-2026)</li>
+          <li>Unirta Robotic Club: Tim Kominfo (2026-2027)</li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <h3>Pengalaman Bekerja</h3>
+        <ul>
+          <li>Eva Motor: Perusahaan bengkel mobil dan onderdil, sebagai asisten mekanik utama (2023-2024)</li>
+          <li>KAMPUNGIN: Usaha pendanaan P2MW, sebagai sekretaris & desain grafis (2025-Present)</li>
+        </ul>
+      </section>
+
+      <section id="proyek" class="card">
+        <h2>Proyek Saya</h2>
+        <div class="project-scroll-wrapper">
+          <article id="proyek" class="card project-item">
+            <img src="assets/Sutet projek.jpeg" alt="Projek Sutet" class="featured-image">
+            <div class="card-content">
+              <h3>Projek SUTET</h3>
+              <p>Membuat miniatur SUTET termasuk menurunkan tegangan 220V ke 5V dengan menggunakan beberapa komponen diantaranya:</p>
+              <ul>
+                <li>Terminal Kabel</li>
+                <li>Kabel NYAF</li>
+                <li>Diode 4007 (pe)</li>
+                <li>Kapasitor 2,2 uf 400V</li>
+                <li>Elco 470 uf 25V</li>
+                <li>Resistor 220K Ohm</li>
+                <li>Diode Zener 5,6V</li>
+              </ul>
+            </div>
+          </article>
+          <article id="proyek1" class="card project-item">
+            <img src="assets/project1.png" alt="Sistem Deteksi Kondisi Aman" class="featured-image">
+            <div class="card-content">
+              <h3>Sistem Deteksi Kondisi Aman</h3>
+              <p>Sistem logika digital (SOP/POS, K-Map) dengan sensor gas MQ2 untuk memicu indikator bahaya di area pabrik. Fokus pada pemahaman dasar desain keamanan.</p>
+            </div>
+          </article>
+          <article id="proyek2" class="card project-item">
+            <img src="assets/project2.jpg" alt="Rangkaian Timer" class="featured-image">
+            <div class="card-content">
+              <h3>Rangkaian Timer Kapasitor</h3>
+              <p>Proyek dasar elektronika semester 2. LED menyala otomatis ±30 detik menggunakan prinsip delay RC (Resistor-Kapasitor) dan switching MOSFET.</p>
+            </div>
+          </article>
+          <article id="proyek3" class="card project-item">
+            <img src="assets/project3.png" alt="Analisis Regresi Linear" class="featured-image">
+            <div class="card-content">
+              <h3>Analisis Regresi Linear</h3>
+              <p>Project komputasi numerik. Analisis hubungan jumlah penduduk vs pengangguran di Banten (2023–2024) menggunakan Python (library sklearn).</p>
+            </div>
+          </article>
+          <article id="proyek4" class="card project-item">
+            <img src="assets/proyek4.png" alt="Metode Node & Mesh" class="featured-image">
+            <div class="card-content">
+                <h3>Metode Node & Mesh</h3>
+                <p>Project ini merupakan bagian tugas akhir praktikum rangkaian listrik, dengan menganalisis sebuah rangkaian searah dua sumber independen dan satu sumber dependen menggunakan metode Node dan Mesh.</p>
+            </div>
+          </article>
+          <article id="proyek5" class="card project-item">
+            <img src="assets/proyek5.png" alt="PM & PCM" class="featured-image">
+            <div class="card-content">
+                <h3>Pulse Modulation & Pulse Code Modulation</h3>
+                <p>Project ini bagian tugas akhir praktikum Dasar Telekomunikasi, untuk menganalisis hasil modulasi dari pulse modulation dan pulse code modulation</p>
+            </div>
+          </article>
+          <article id="proyek6" class="card project-item">
+            <img src="assets/projek dasmik.jpeg" alt="Projek Dasar Mikroprosesor" class="featured-image">
+            <div class="card-content">
+              <h3>LED Chesar dengan Arduino</h3>
+              <p>Projek ini bagian tugas akhir Mata Kuliah Dasar Mikroprosesor dengan membuat led chesar sebagai penunjuk jalan di stasiun kereta api</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="aktivitas" class="card">
+        <h2>Dokumentasi Kegiatan</h2>
+
+        <div class="project-scroll-wrapper">
+          <article class="card project-item">
+            <img src="assets/Foto KMI Expo.jpeg" alt="KMI Expo" class="featured-image">
+            <div>
+              <h3>KMI Expo XVI UNTIDAR Magelang 2025</h3>
+              <p>Lolos seleksi KMI EXPO XVI 2025 di UNTIDAR, Magelang. Berkesempatan memamerkan produk inovasi, mengikuti KMI AWARD, kirab budaya dan berjejaring dengan wirausahawan muda se-Indonesia.</p>
+            </div>
+          </article>
+          <article class="card project-item">
+            <img src="assets/ZGTC.jpeg" alt="ZGTC" class="featured-image">
+            <div>
+              <h3>ZGTC Project Social Chapter Banten</h3>
+              <p>10 Finalis terbaik dalam projek sosial ZGTC Chapter Banten</p>
+            </div>
+          </article>
+          <article class="card project-item">
+            <img src="assets/Mentor.JPG" alt="Mentor Sobi Jilid 2" class="featured-image">
+            <div>
+              <h3>Mentor Perlombaan Sobi Jilid 2</h3>
+              <p>Mendampingi siswa-siswi SMPN 2 Tirtayasa dalam lomba kreasi olah sampah</p>
+            </div>
+          </article>
+          <article class="card project-item">
+            <img src="assets/Nanam Mangrove.JPG" alt="Penanaman Mangrove" class="featured-image">
+            <div>
+              <h3>Penanaman Mangrove</h3>
+              <p>Mengikuti Volunteer Sobi Jilid 2 sebagai divisi logistik dan mengikuti penanaman 150 bibit mangrove di desa lontar pada tanggal 3 januari 2026</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="sertifikat-gabungan" class="card full-width-card">
+        <h2>Sertifikat & Penghargaan</h2>
+        <h3>Pelatihan & Kelas</h3>
+        <div class="sertifikat-gallery">
+          <a href="assets/datascience.pdf" target="_blank"><img src="assets/datascience.png" alt="Data Science"></a>
+          <a href="assets/dasaraws.pdf" target="_blank"><img src="assets/dasaraws.png" alt="AWS Cloud"></a>
+          <a href="assets/dasarai.pdf" target="_blank"><img src="assets/dasarai.png" alt="Dasar AI"></a>
+          <a href="assets/Belajar Dasar Pemrograman Web.pdf" target="_blank"><img src="assets/Pemrograman WEB.png" alt="Pemrograman WEB"></a>
+        </div>
+        <h3 style="margin-top: 30px;">Kompetisi & Penghargaan</h3>
+        <div class="sertifikat-gallery">
+          <a href="assets/Sertifikat LKHME_Aditya Firansyah.pdf" target="_blank"><img src="assets/LKHME.png" alt="LKHME"></a>
+          <a href="assets/ADITYA FIRANSYAH_3332240017_p2mw.pdf" target="_blank"><img src="assets/P2MW.png" alt="P2MW"></a>
+          <a href="assets/Sertif KMI Belmawa.pdf" target="_blank"><img src="assets/KMI expo.png" alt="KMI Expo"></a>
+          <a href="assets/sertiv kmi univ.pdf" target="_blank"><img src="assets/Penghargaan TIM KMI expo.png" alt="KMI UNIV"></a>
+          <a href="assets/AMF_Business Plan.jpeg" target="_blank"><img src="assets/AMF_Business Plann.png" alt="AMF_BISNIS PLAN"></a>
+          <a href="assets/AMF_Inovasi Produk.jpeg" target="_blank"><img src="assets/AMF_Inovasi Produkk.png" alt="AMF_inovasi produk"></a>
+          <a href="assets/SOBI JILID 2.jpg" target="_blank"><img src="assets/SOBI JILID 2.jpg" alt="SOBI JILID 2"></a>
+        </div>
+      </section>
+
+    </div> <aside class="sidebar-info">
+      <section class="card info-card">
+        <h3>Status Akademik</h3>
+        <ul>
+          <li><strong>Univ:</strong> Untirta</li>
+          <li><strong>Jurusan:</strong> Teknik Elektro</li>
+          <li><strong>IPK:</strong> 3.50/4.00 (Sem 3)</li>
+        </ul>
+      </section>
+
+      <section class="card info-card">
+        <h3>Skill & Tools</h3>
+        <div class="skill-tags">
+          <span>Elektronika Dasar</span>
+          <span>Python</span>
+          <span>Arduino/IoT</span>
+          <span>Solder</span>
+          <span>Proteus</span>
+        </div>
+      </section>
+      
+      <section id="kontak" class="card info-card contact-card-special">
+        <h3>Kontak</h3>
+        <div class="contact-links-wrapper">
+          <p class="contact-link">💬 <a href="https://wa.me/6285179968047?text=Halo%20Aditya,%20saya%20tertarik%20dengan%20profil%20Anda." target="_blank">WhatsApp Chat</a></p>
+          <p class="contact-link">📩 <a href="mailto:adityafrnsyh148@gmail.com">Kirim Email</a></p>
+          <p class="contact-link">💼 <a href="https://www.linkedin.com/in/aditya-firansyah-98609b296" target="_blank">LinkedIn Profil</a></p>
+        </div>
+      </section>
+    </aside>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Elektro Playground. Dibuat dengan semangat belajar oleh Aditya Firansyah.</p>
+  </footer>
+
+  <script src="styles/script.js"></script>
+</body>
+</html>
