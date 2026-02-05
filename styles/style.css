@@ -1,0 +1,472 @@
+/* ===============================
+   VARIABLES & SETUP (Konfigurasi Warna)
+================================ */
+:root {
+    /* Palet Warna Dark Mode */
+    --bg-dark: #050a14; /* Biru sangat gelap */
+    /* Warna kartu transparan (kaca gelap) */
+    --card-dark: rgba(16, 24, 39, 0.75); 
+    --text-primary: #ffffff;
+    --text-secondary: #b0b8c4;
+    
+    /* Warna Aksen Elektro (Oranye/Emas) */
+    --accent-glow: #ff8c00; 
+    --accent-secondary: #ffd700;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg-dark);
+    /* PASTIKAN FILE background utama.jpg ADA DI FOLDER ASSETS */
+    background-image: url('../assets/background\ utama.jpg'); 
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    color: var(--text-primary);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* ===============================
+   NAVBAR (Sticky & Glass Effect)
+================================ */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: rgba(5, 10, 20, 0.85);
+    backdrop-filter: blur(15px);
+    border-bottom: 1px solid rgba(255, 140, 0, 0.15);
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    background: linear-gradient(to right, var(--accent-secondary), var(--accent-glow));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-secondary);
+    font-weight: 500;
+    transition: all 0.3s ease;
+    position: relative;
+    font-size: 0.95rem;
+}
+
+/* Efek hover pada menu navigasi */
+.nav-links a:hover, .nav-links a.active {
+    color: var(--accent-glow);
+}
+
+/* Garis bawah menyala saat aktif */
+.nav-links a.active::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: var(--accent-glow);
+    box-shadow: 0 0 8px var(--accent-glow);
+}
+
+#menuToggle {
+    display: none; /* Disembunyikan di desktop */
+    background: none;
+    border: none;
+    color: var(--text-primary);
+    font-size: 1.8rem;
+    cursor: pointer;
+}
+
+/* ===============================
+   HERO SECTION (Intro Besar)
+================================ */
+#hero {
+    min-height: 85vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    margin-bottom: 10px;
+    font-weight: 700;
+    letter-spacing: -1px;
+}
+
+.hero-content .subtitle {
+    font-size: 1.4rem;
+    color: var(--text-secondary);
+    margin-bottom: 45px;
+    font-weight: 300;
+}
+
+/* Tombol Menyala */
+.btn-glow {
+    display: inline-block;
+    padding: 12px 35px;
+    color: var(--accent-glow);
+    border: 2px solid var(--accent-glow);
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 15px rgba(255, 140, 0, 0.2);
+    background: rgba(255, 140, 0, 0.05);
+}
+
+.btn-glow:hover {
+    background: var(--accent-glow);
+    color: var(--bg-dark);
+    box-shadow: 0 0 30px rgba(255, 140, 0, 0.5);
+}
+
+/* ===============================
+   MAIN LAYOUT & GRID SYSTEM
+================================ */
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 50px 20px;
+    display: grid;
+    /* Proporsi 2 kolom utama */
+    grid-template-columns: 3fr 1fr; 
+    gap: 30px;
+    align-items: start;
+}
+
+/* [FIX LAYOUT] Mencegah konten grid melebar keluar jalur */
+main > * {
+    min-width: 0;
+}
+
+/* ===============================
+   CARD STYLES (CORE)
+================================ */
+.card {
+    background: var(--card-dark);
+    border-radius: 16px;
+    padding: 25px;
+    margin-bottom: 25px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(10px);
+    transition: all 0.4s ease;
+    
+    /* Flexbox untuk meratakan isi secara vertikal */
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+/* Efek Hover pada Card */
+.card:hover {
+    transform: translateY(-7px);
+    border-color: var(--accent-glow);
+    box-shadow: 0 10px 30px -10px rgba(255, 140, 0, 0.25);
+}
+
+.card h2, .card h3 {
+    color: var(--text-primary);
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.card p {
+    color: var(--text-secondary);
+    margin-bottom: 15px;
+    font-size: 0.95rem;
+}
+
+.card-content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+.card-content p {
+     margin-bottom: 0;
+}
+
+/* ===============================
+   SPECIFIC CARD STYLES
+================================ */
+
+/* --- Kartu Profil (Tentang) --- */
+.profile-card-highlight {
+    border: 1px solid rgba(255, 140, 0, 0.25);
+}
+
+.profile-flex {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.profile-glow {
+    width: 140px;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid var(--accent-glow);
+    box-shadow: 0 0 25px rgba(255, 140, 0, 0.4);
+}
+
+/* --- Gambar Proyek (Agar seragam) --- */
+.featured-image {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    margin-bottom: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+.card:hover .featured-image {
+     border-color: rgba(255, 140, 0, 0.4);
+}
+
+/* --- Sidebar Cards --- */
+.sidebar-info .card {
+    padding: 20px;
+    margin-bottom: 20px;
+    height: auto; 
+}
+
+.sidebar-info ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.sidebar-info li {
+    margin-bottom: 12px;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+    padding-bottom: 8px;
+}
+
+.sidebar-info strong {
+    color: var(--text-primary);
+    font-weight: 500;
+}
+
+/* Tag Skill */
+.skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.skill-tags span {
+    background: rgba(255, 140, 0, 0.08);
+    color: var(--accent-glow);
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    border: 1px solid rgba(255, 140, 0, 0.3);
+    font-weight: 500;
+}
+
+/* --- KARTU KONTAK SPESIAL (Link di Bawah) --- */
+.contact-card-special {
+    display: flex; 
+    flex-direction: column;
+    min-height: 200px;
+}
+
+.contact-links-wrapper {
+    margin-top: auto;
+    padding-top: 15px;
+}
+
+.contact-link {
+    margin-bottom: 10px;
+}
+
+.contact-link a {
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.3s;
+    font-weight: 500;
+}
+
+.contact-link a:hover {
+    color: var(--accent-glow);
+}
+
+/* ===============================
+   SERTIFIKAT GALLERY
+================================ */
+.full-width-card {
+    grid-column: span 1; 
+}
+
+.sertifikat-gallery {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 15px;
+}
+
+.sertifikat-gallery img {
+    height: 110px;
+    width: auto;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+    background: rgba(255,255,255,0.05);
+    padding: 5px;
+}
+
+.sertifikat-gallery img:hover {
+    transform: scale(1.05);
+    border-color: var(--accent-glow);
+    box-shadow: 0 0 15px rgba(255, 140, 0, 0.3);
+}
+
+/* ===============================
+   FOOTER
+================================ */
+footer {
+    text-align: center;
+    padding: 30px;
+    margin-top: 50px;
+    background: rgba(5, 10, 20, 0.95);
+    color: var(--text-secondary);
+    border-top: 1px solid rgba(255, 140, 0, 0.15);
+    font-size: 0.9rem;
+}
+
+/* =========================================
+   REVISI 1: HORIZONTAL SCROLL PROYEK
+========================================= */
+.project-scroll-wrapper {
+    display: flex;
+    overflow-x: auto;
+    gap: 25px;
+    padding: 10px 0 20px 0;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    
+    /* Mencegah wadah scroll melebihi lebar induknya */
+    width: 100%;
+    max-width: 100%;
+
+    /* Kustomisasi Scrollbar (Opsional) */
+    scrollbar-width: thin;
+    scrollbar-color: var(--accent-glow) rgba(255, 255, 255, 0.05);
+}
+
+.project-scroll-wrapper::-webkit-scrollbar { height: 8px; }
+.project-scroll-wrapper::-webkit-scrollbar-track { background: rgba(255, 255, 255, 0.05); border-radius: 10px; }
+.project-scroll-wrapper::-webkit-scrollbar-thumb { background: var(--accent-glow); border-radius: 10px; }
+
+
+/* Gaya khusus untuk kartu di dalam scroll container */
+.project-scroll-wrapper .card.project-item {
+    flex: 0 0 auto; /* Kartu tidak menyusut/melebar otomatis */
+    width: 320px; /* Lebar tetap di Desktop */
+    scroll-snap-align: start;
+    margin-bottom: 0;
+    height: auto;
+}
+
+
+/* ===============================
+   RESPONSIVE (Tampilan HP/Tablet)
+================================ */
+@media screen and (max-width: 900px) {
+     /* Ubah layout utama jadi 1 kolom */
+    main {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    
+    /* Sesuaikan lebar kartu proyek scroll di tablet/HP */
+    .project-scroll-wrapper .card.project-item {
+        width: 85%; /* Sedikit lebih kecil agar kartu sebelah terlihat */
+    }
+
+    .profile-flex {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .contact-card-special {
+        min-height: auto;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .navbar {
+        padding: 15px 20px;
+    }
+
+    #menuToggle {
+        display: block;
+    }
+
+    .nav-links {
+        position: fixed;
+        top: 60px;
+        right: -100%;
+        background: rgba(5, 10, 20, 0.98);
+        backdrop-filter: blur(15px);
+        height: auto;
+        width: 70%;
+        flex-direction: column;
+        align-items: center;
+        padding: 50px 0;
+        border-left: 1px solid rgba(255, 140, 0, 0.3);
+        box-shadow: -10px 0 30px rgba(0,0,0,0.5);
+        transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        border-bottom-left-radius: 20px;
+    }
+
+    .nav-links.show {
+        right: 0;
+    }
+    
+    .nav-links li {
+        margin: 15px 0;
+    }
+
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+    
+    .sertifikat-gallery {
+        justify-content: center;
+    }
+}
